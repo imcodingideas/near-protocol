@@ -10,4 +10,4 @@ class Question(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.body[0:208]
+        return self.title[0:50] + "..."

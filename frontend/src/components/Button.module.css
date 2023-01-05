@@ -1,0 +1,17 @@
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    background: #6074DD;
+    border: 1px solid #6074DD;
+    box-shadow: 0px 4px 8px rgba(96, 116, 221, 0.25);
+    border-radius: 25px;
+    padding: 8px 12px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
