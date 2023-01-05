@@ -1,0 +1,37 @@
+.main {
+    margin: 0 auto;
+    max-width: var(--max-page-width);
+}
+
+.header {
+    grid-column: 1 / -1;
+    padding: var(--page-content-padding);
+    padding-top: 96px;
+}
+
+.main {
+    grid-column: 1 / 2;
+}
+
+.sidebar {
+    grid-column: 3 / 3;
+}
+
+.grid {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10px, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    .grid>* {
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+    }
+}

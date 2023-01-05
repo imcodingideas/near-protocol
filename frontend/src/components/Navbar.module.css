@@ -2,3 +2,14 @@
     background: #EAEAEA;
     height: 64px;
 }
+
+.navigationContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 100%;
+    margin: 0 auto;
+    max-width: var(--max-page-width);
+    padding: var(--page-content-padding);
+}

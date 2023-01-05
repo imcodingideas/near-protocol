@@ -11,13 +11,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@tanstack/query-sync-storage-persister": "^4.20.9",
     "@tanstack/react-query": "^4.20.9",
     "@tanstack/react-query-devtools": "^4.20.9",
     "@tanstack/react-query-persist-client": "^4.20.9",
-    "axios": "^1.2.2"
+    "@tanstack/react-router": "^0.0.1-beta.46",
+    "axios": "^1.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

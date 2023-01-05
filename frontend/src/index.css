@@ -1,4 +1,34 @@
+:root {
+  --max-page-width: 1120px;
+  --page-content-padding: 0 1rem;
+
+  --background-color: #F7F7F7;
+
+  --banner-background-color: #969696;
+  --banner-text-color: #34324C;
+
+  --headers-font: 'Rubik';
+  --body-font: 'Poppins';
+}
+
 html,
 body {
-  background: #F7F7F7;
+  font-family: var(--body-font);
+  background: var(--background-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headers-font);
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
 }
