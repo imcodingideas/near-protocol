@@ -12,7 +12,7 @@ export const useQuestions = () =>
     queryKey: ['questions'],
     queryFn: async (): Promise<Array<Question>> => {
       const { data } = await axios.get<Array<Question>>(
-        'http://127.0.0.1:8001/questions'
+        '/api/questions/'
       );
       return data;
     },

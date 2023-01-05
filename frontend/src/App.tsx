@@ -5,8 +5,6 @@ import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client
 
 import { Home } from './pages/Home';
 
-import './App.css';
-
 const queryClient = new QueryClient();
 
 const persister = createSyncStoragePersister({
