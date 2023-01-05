@@ -5,6 +5,7 @@ from rest_framework.decorators import api_view
 from .models import Question
 from .serializers import QuestionSerializer
 
+
 @api_view(['GET'])
 def getRoutes(request):
     routes = [
@@ -33,11 +34,13 @@ def getRoutes(request):
 # /questions GET
 # /questions/<id> GET
 
+
 @api_view(['GET'])
 def getQuestions(request):
     questions = Question.objects.all().order_by('-created_at')
     serializer = QuestionSerializer(questions, many=True)
     return Response(serializer.data)
+
 
 @api_view(['GET'])
 def getQuestion(request, pk):
