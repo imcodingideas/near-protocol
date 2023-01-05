@@ -16,8 +16,6 @@ type Question = {
   id: number;
   title: string;
   body: string;
-  created_at: string;
-  updated_at: string;
 };
 
 function useQuestions() {
@@ -39,8 +37,6 @@ function Questions() {
     return <div>Loading...</div>;
   }
 
-  console.log(data);
-
   return (
     <div>
       {data?.map((question) => (
@@ -61,6 +57,7 @@ function App() {
     >
       <div className="App">
         <h1>Getting Started</h1>
+
         <Questions />
       </div>
       <ReactQueryDevtools />
