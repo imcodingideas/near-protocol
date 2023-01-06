@@ -6,6 +6,7 @@ import { Button } from '../Button';
 import { Card } from '../Card';
 import { Divider } from '../Divider';
 import { FormField } from './components/FormField';
+import { TextAreaField } from './components/TextAreaField';
 import styles from './CreateQuestionForm.module.css';
 import { useCreateQuestionForm } from './hooks/useCreateQuestionForm';
 
@@ -30,10 +31,12 @@ export const CreateQuestionForm = () => {
                     placeholder="Enter the question title"
                 />
 
-                <FormField
+                <TextAreaField
                     error={bodyError}
                     name={CreateQuestionShape.body}
                     placeholder="Write your question here"
+                    rows={10}
+                    cols={33}
                 />
 
                 {createQuestionError && (

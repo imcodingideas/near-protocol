@@ -5,7 +5,7 @@
 
     border-top: 20px solid transparent;
 
-    --field-padding: 12px;
+    --field-padding: 16px;
 }
 
 .error {
@@ -25,8 +25,7 @@
     width: -moz-available;
     font-size: 14px;
 
-
-    /* BORDER */
+    border-radius: 16px;
     border: 1px solid #E0E0E0;
 }
 
@@ -35,7 +34,7 @@
     bottom: 50%;
     top: 22px;
     left: var(--field-padding);
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     width: calc(100% - (var(--field-padding) * 2));
     color: #aaa;
     overflow: hidden;
