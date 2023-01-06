@@ -12,7 +12,7 @@
     color: red;
 }
 
-.container input {
+.container .field {
     border: none;
     -webkit-appearance: none;
     -ms-appearance: none;
@@ -21,7 +21,8 @@
     background: #FFFFFF;
     padding: var(--field-padding);
     border-radius: 3px;
-    width: 250px;
+    width: -webkit-fill-available;
+    width: -moz-available;
     font-size: 14px;
 
 
@@ -50,13 +51,13 @@
         font-size 0.3s ease;
 }
 
-.container input:focus+.placeholder {
+.container .field:focus+.placeholder {
     top: -10px;
     font-size: 10px;
     color: #222;
 }
 
-.container input:not(:placeholder-shown)+.placeholder {
+.container .field:not(:placeholder-shown)+.placeholder {
     top: -10px;
     font-size: 10px;
     color: #222;
