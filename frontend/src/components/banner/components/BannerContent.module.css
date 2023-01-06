@@ -5,7 +5,3 @@
     align-items: center;
     gap: 28px;
 }
-
-.title {
-    color: var(--banner-text-color);
-}

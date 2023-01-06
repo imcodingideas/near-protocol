@@ -8,7 +8,7 @@ export const BannerContent = (props: PropsWithChildren<BannerContentProps>) => {
     return (
         <div className={styles.bannerContent}>
             <Logo />
-            <h1 className={styles.title}>
+            <h1>
                 Near Protocol
             </h1>
         </div>
