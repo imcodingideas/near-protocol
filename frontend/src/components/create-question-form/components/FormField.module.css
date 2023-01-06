@@ -1,0 +1,11 @@
+.container {
+    margin: 16px 0;
+}
+
+.container label::after {
+    content: attr(aria-label);
+}
+
+.error {
+    color: red;
+}

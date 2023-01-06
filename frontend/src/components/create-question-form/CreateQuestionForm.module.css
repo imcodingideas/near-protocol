@@ -2,14 +2,6 @@
     margin: 0 0 24px 0;
 }
 
-.inputContainer {
-    margin: 16px 0;
-}
-
-.inputContainer label::after {
-    content: attr(aria-label);
-}
-
 .error {
     color: red;
 }

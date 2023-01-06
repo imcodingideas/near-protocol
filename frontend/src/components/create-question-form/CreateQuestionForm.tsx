@@ -5,6 +5,7 @@ import {
 import { Button } from '../Button';
 import { Card } from '../Card';
 import { Divider } from '../Divider';
+import { FormField } from './components/FormField';
 import styles from './CreateQuestionForm.module.css';
 import { useCreateQuestionForm } from './hooks/useCreateQuestionForm';
 
@@ -22,19 +23,18 @@ export const CreateQuestionForm = () => {
             <Card<FormHTMLAttributes<HTMLFormElement>> onSubmit={handleSubmit} as={"form"}>
                 <h3 className={styles.title}>New Question</h3>
                 <Divider />
-                <div className={styles.inputContainer}>
-                    <label aria-label="Enter the question title">
-                        <input name={CreateQuestionShape.title} type="text" />
-                    </label>
-                    {titleError && <p className={styles.error}>{titleError}</p>}
-                </div>
 
-                <div className={styles.inputContainer}>
-                    <label aria-label="Write your question here">
-                        <input name={CreateQuestionShape.body} type="text" />
-                    </label>
-                    {bodyError && <p className={styles.error}>{bodyError}</p>}
-                </div>
+                <FormField
+                    error={titleError}
+                    name={CreateQuestionShape.title}
+                    placeholder="Enter the question title"
+                />
+
+                <FormField
+                    error={bodyError}
+                    name={CreateQuestionShape.body}
+                    placeholder="Write your question here"
+                />
 
 
                 {createQuestionError && (
