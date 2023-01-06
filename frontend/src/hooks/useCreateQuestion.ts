@@ -7,6 +7,7 @@ const createQuestion = async (data: CreateQuestionSchema) => {
     const { data: response } = await axios.post<Question>('/api/questions/create/', data, {
         headers: {
             'Content-Type': 'application/json',
+            'X-CSRFToken': '', // HotFix: CSRF Token
         },
     })
 
