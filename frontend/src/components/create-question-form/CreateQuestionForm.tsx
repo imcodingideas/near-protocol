@@ -50,7 +50,11 @@ export const CreateQuestionForm = () => {
                         <p className={styles.loading}>Posting...</p>
                     </div>
                 )}
-                <Button type="submit">Post</Button>
+
+
+                <div className={styles.submit}>
+                    <Button type="submit">Post</Button>
+                </div>
             </Card>
         </>
     )
