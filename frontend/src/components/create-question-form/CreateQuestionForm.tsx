@@ -18,7 +18,7 @@ export const CreateQuestionForm = () => {
     const [bodyError, setBodyError] = useState<string | null>(null);
     const [createQuestionError, setCreateQuestionError] = useState<string | null>(null);
 
-    const { mutate: createQuestionMutation } = useCreateQuestion({
+    const { mutate: createQuestionMutation, reset: resetCreateQuestionMutation } = useCreateQuestion({
         onSuccess: async () => {
             await router.navigate({
                 to: '/',
@@ -33,6 +33,7 @@ export const CreateQuestionForm = () => {
         setTitleError(null);
         setBodyError(null);
         setCreateQuestionError(null);
+        resetCreateQuestionMutation();
     };
 
     const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
