@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-type Question = {
+export type Question = {
   id: number;
   title: string;
   body: string;

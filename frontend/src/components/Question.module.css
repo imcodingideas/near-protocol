@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title {
+    margin: 0;
+}
+
+.text {
+    margin: 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.division {
+    margin: 24px 0;
+    border: 1px solid #DEDEDE;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.avatar {
+    border-radius: 157.75px;
+}
+
+.profileDetails {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.profileDetailsTitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6074DD;
+}
+
+.profileDetailsText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #969696;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from './Card';
+import { Question } from './Question';
 import { useQuestions } from '../hooks/useQuestions';
 
 export const Questions = () => {
@@ -11,12 +11,7 @@ export const Questions = () => {
 
   return (
     <>
-      {data?.map((question) => (
-        <Card key={question.id}>
-          <h3>{question.title}</h3>
-          <p>{question.body}</p>
-        </Card>
-      ))}
+      {data?.map((question) => <Question {...question} />)}
     </>
   );
 };
