@@ -1,69 +1,21 @@
-import { useRouter } from '@tanstack/react-router'
-import { useState, FormHTMLAttributes } from 'react';
+import { FormHTMLAttributes } from 'react';
 import {
-    CreateQuestionSchema,
-    CreateQuestionShape,
-    CreateQuestionShapeKeys
+    CreateQuestionShape
 } from '../../validations/create-question.validation';
-import { useCreateQuestion } from '../../hooks/useCreateQuestion';
-import { Question } from '../../types';
+import { Button } from '../Button';
 import { Card } from '../Card';
 import { Divider } from '../Divider';
-import { Button } from '../Button';
 import styles from './CreateQuestionForm.module.css';
+import { useCreateQuestionForm } from './hooks/useCreateQuestionForm';
 
 export const CreateQuestionForm = () => {
-    const router = useRouter();
-    const [titleError, setTitleError] = useState<string | null>(null);
-    const [bodyError, setBodyError] = useState<string | null>(null);
-    const [createQuestionError, setCreateQuestionError] = useState<string | null>(null);
-
-    const { mutate: createQuestionMutation, reset: resetCreateQuestionMutation } = useCreateQuestion({
-        onSuccess: async () => {
-            await router.navigate({
-                to: '/',
-            })
-        },
-        onError: (error) => {
-            setCreateQuestionError(error.message);
-        }
-    });
-
-    const resetErrors = () => {
-        setTitleError(null);
-        setBodyError(null);
-        setCreateQuestionError(null);
-        resetCreateQuestionMutation();
-    };
-
-    const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
-        e.preventDefault();
-        resetErrors();
-
-        const formData = new FormData(e.currentTarget);
-
-        const validation = CreateQuestionSchema.safeParse({
-            title: formData.get(CreateQuestionShape.title),
-            body: formData.get(CreateQuestionShape.body),
-        });
-
-        const setError: Record<CreateQuestionShapeKeys, ((error: string) => void) | undefined> = {
-            title: setTitleError,
-            body: setBodyError,
-        };
-
-        if (!validation.success) {
-            validation.error.errors.forEach((error) => {
-                const path = error.path as [CreateQuestionShapeKeys];
-                const type = path[0];
-
-                setError[type]?.(error.message);
-            });
-            return;
-        }
-
-        createQuestionMutation(validation.data);
-    };
+    const {
+        bodyError,
+        createQuestionError,
+        handleSubmit,
+        titleError,
+        isLoading
+    } = useCreateQuestionForm();
 
     return (
         <>
@@ -88,6 +40,12 @@ export const CreateQuestionForm = () => {
                 {createQuestionError && (
                     <div>
                         <p className={styles.error}>{createQuestionError}</p>
+                    </div>
+                )}
+
+                {isLoading && (
+                    <div>
+                        <p className={styles.loading}>Posting...</p>
                     </div>
                 )}
                 <Button type="submit">Post</Button>
