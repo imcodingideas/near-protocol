@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from './Card';
 import { Question as QuestionType } from '../hooks/useQuestions';
 import { css } from '../utils';
