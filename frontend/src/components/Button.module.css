@@ -14,4 +14,10 @@
     font-size: 12px;
     line-height: 14px;
     color: #FFFFFF;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #99A5E6;
+    border: 1px solid #99A5E6;
 }

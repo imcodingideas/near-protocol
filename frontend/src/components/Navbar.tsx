@@ -4,7 +4,9 @@ import styles from './Navbar.module.css';
 export const Navbar = () => (
   <nav className={styles.navigation}>
     <div className={styles.navigationContent}>
-      <Button text="Ask a question" />
+      <Button text="Ask a question" onClick={() => {
+        alert('Ask a question');
+      }} />
     </div>
   </nav>
 );
