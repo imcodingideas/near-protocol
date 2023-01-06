@@ -1,5 +1,5 @@
 .container {
-    margin: 16px 0;
+    margin: 0 0 10px 0;
     font-size: 14px;
     position: relative;
 
@@ -10,6 +10,8 @@
 
 .error {
     color: red;
+    padding: 0;
+    margin: 10px 0;
 }
 
 .container .field {
