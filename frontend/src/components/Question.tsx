@@ -1,5 +1,5 @@
 import { Card } from './Card';
-import { Question as QuestionType } from '../hooks/useQuestions';
+import { Question as QuestionType } from '../types';
 import { Divider } from './Divider';
 import { css } from '../utils';
 import styles from './Question.module.css';

@@ -1,11 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-
-export type Question = {
-  id: number;
-  title: string;
-  body: string;
-};
+import { Question } from '../types';
 
 export const useQuestions = () =>
   useQuery({
