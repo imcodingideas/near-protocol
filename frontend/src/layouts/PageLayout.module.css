@@ -3,6 +3,9 @@
     max-width: var(--max-page-width);
     padding: var(--page-content-padding);
     box-sizing: border-box;
+
+    /* quick hack */
+    margin-bottom: 48px;
 }
 
 .header {
