@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from './Card';
 import { useQuestions } from '../hooks/useQuestions';
 
 export const Questions = () => {
@@ -9,13 +10,13 @@ export const Questions = () => {
   }
 
   return (
-    <div>
+    <>
       {data?.map((question) => (
-        <div key={question.id}>
+        <Card key={question.id}>
           <h3>{question.title}</h3>
           <p>{question.body}</p>
-        </div>
+        </Card>
       ))}
-    </div>
+    </>
   );
 };

@@ -1,4 +1,5 @@
 import { PropsWithChildren } from 'react'
+import { Card } from '../Card'
 import styles from './AsideCard.module.css'
 
 export interface AsideCardProps {
@@ -7,9 +8,9 @@ export interface AsideCardProps {
 
 export const AsideCard = ({ children, title }: PropsWithChildren<AsideCardProps>) => {
     return (
-        <div className={styles.card}>
+        <Card>
             <h2 className={styles.title}>{title}</h2>
             {children}
-        </div>
+        </Card>
     )
 }
