@@ -11,7 +11,7 @@ export const Questions = () => {
 
   return (
     <>
-      {data?.map((question) => <Question {...question} />)}
+      {data?.map((question) => <Question key={question.id} {...question} />)}
     </>
   );
 };
