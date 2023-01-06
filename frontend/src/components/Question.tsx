@@ -1,5 +1,6 @@
 import { Card } from './Card';
 import { Question as QuestionType } from '../hooks/useQuestions';
+import { Divider } from './Divider';
 import { css } from '../utils';
 import styles from './Question.module.css';
 
@@ -10,7 +11,7 @@ export const Question = ({ title, body }: QuestionType) => {
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.text}>{body}</p>
       </div>
-      <hr className={styles.division} />
+      <Divider className={styles.divider} />
       <div className={styles.footer}>
         <h4 className={styles.title}>Asked By:</h4>
         <div className={styles.profileDetails}>

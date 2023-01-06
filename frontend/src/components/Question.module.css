@@ -16,10 +16,10 @@
     -webkit-box-orient: vertical;
 }
 
-.division {
+.divider {
     margin: 24px 0;
-    border: 1px solid #DEDEDE;
 }
+
 
 .footer {
     display: flex;
