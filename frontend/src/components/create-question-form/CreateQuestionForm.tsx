@@ -36,7 +36,6 @@ export const CreateQuestionForm = () => {
                     placeholder="Write your question here"
                 />
 
-
                 {createQuestionError && (
                     <div>
                         <p className={styles.error}>{createQuestionError}</p>

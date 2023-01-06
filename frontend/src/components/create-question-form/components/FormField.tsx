@@ -11,10 +11,10 @@ interface FormFieldProps {
 export const FormField = ({ name, placeholder, error, type = 'text' }: FormFieldProps) => {
     return (
         <div className={styles.container}>
-            <label className={styles.field} aria-label={placeholder}>
-                <input name={name} type={type} />
-            </label>
+            <input className={styles.field} name={name} type={type} placeholder="&nbsp;" />
+            <label htmlFor={name} className={styles.placeholder} aria-label={placeholder}>{placeholder}</label>
             {error && <p className={styles.error}>{error}</p>}
-        </div>
+        </div >
+
     )
 };
