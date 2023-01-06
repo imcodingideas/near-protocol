@@ -31,7 +31,8 @@ def getRoutes(request):
 
     return Response(routes)
 
-# /questions GET
+# /questions/ GET
+# /questions/create/ POST
 # /questions/<id> GET
 
 
@@ -45,5 +46,16 @@ def getQuestions(request):
 @api_view(['GET'])
 def getQuestion(request, pk):
     question = Question.objects.get(id=pk)
+    serializer = QuestionSerializer(question, many=False)
+    return Response(serializer.data)
+
+
+@api_view(['POST'])
+def createQuestion(request):
+    data = request.data
+    question = Question.objects.create(
+        title=data['title'],
+        body=data['body']
+    )
     serializer = QuestionSerializer(question, many=False)
     return Response(serializer.data)
