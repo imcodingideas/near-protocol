@@ -4,13 +4,11 @@
     padding: var(--page-content-padding);
     box-sizing: border-box;
 
-    /* quick hack */
-    margin-bottom: 48px;
+    margin: 48px auto;
 }
 
 .header {
     grid-column: 1 / -1;
-    padding-top: 96px;
 }
 
 .content {
